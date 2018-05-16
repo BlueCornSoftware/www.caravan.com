@@ -21,15 +21,16 @@ const styles = {
   },
 };
 
-function ButtonAppBar() {
+function ButtonAppBar(props) {
+  const { classes } = props;
   return (
-    <div>
+    <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton color="inherit" aria-label="Menu">
+          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit">
+          <Typography variant="title" color="inherit" className={classes.flex}>
             Caravan
           </Typography>
           <Button color="inherit">Login</Button>
