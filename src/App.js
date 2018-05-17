@@ -8,6 +8,7 @@ class App extends Component {
       <div className="App">
         <Nav.Menu />
         <Landing.Card>
+          <h4>Hello</h4>
           <Landing.Form />
         </Landing.Card>
       </div>
