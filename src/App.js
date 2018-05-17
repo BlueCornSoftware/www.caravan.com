@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as Home from './Home';
+import * as Landing from './Landing';
 import * as Nav from './Nav';
 
 class App extends Component {
@@ -7,7 +7,9 @@ class App extends Component {
     return (
       <div className="App">
         <Nav.Menu />
-        <Home.Page />
+        <Landing.Card>
+          <Landing.Form />
+        </Landing.Card>
       </div>
     );
   }
