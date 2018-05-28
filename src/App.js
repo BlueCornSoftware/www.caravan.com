@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import * as Landing from './Landing';
-import * as Nav from './Nav';
+import React, { Component } from "react";
+import * as Landing from "./Landing";
+import * as Nav from "./Nav";
 
 class App extends Component {
   render() {
