@@ -3,5 +3,5 @@ node_js:
   - "8"
 script:
   - nsp check
-  - CI=true npm test -- --coverage
+  - CI=true npm test -- --coverage --env=jsdom
   
