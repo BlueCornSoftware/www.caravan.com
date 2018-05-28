@@ -1,10 +1,5 @@
-import Menu from './Nav.menu';
-import reducer from './Nav.reducer';
-import initialState from './Nav.initial-state';
+import Menu from "./menu";
+import reducer from "./reducer";
+import initialState from "./initial-state";
 
-
-export {
-  Menu,
-  reducer,
-  initialState,
-}
+export { Menu, reducer, initialState };
