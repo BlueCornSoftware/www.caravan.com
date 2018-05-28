@@ -7,4 +7,4 @@ before_install:
   - echo "(Before Install) Running Tests"
 
 script:
-  - npm test
+  - CI=true npm test -- --coverage
