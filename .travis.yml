@@ -1,11 +1,6 @@
-sudo: required
-
 language: node_js
-node_js: "8.5.0"
-sudo: false
-
-before_install:
-  - echo "(Before Install) Running Tests"
-
+node_js:
+  - "8"
 script:
   - CI=true npm test -- --coverage
+  
