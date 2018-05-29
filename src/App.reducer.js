@@ -5,4 +5,4 @@ import { reducer as Nav } from './Nav';
 export default combineReducers({
   Nav,
   form,
-});
+})
