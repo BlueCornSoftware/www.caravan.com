@@ -1,6 +1,6 @@
-import reducer from './Nav.reducer';
-import initialState from './Nav.initial-state';
-import * as actions from './Nav.actions';
+import reducer from './reducer';
+import initialState from './initial-state';
+import * as actions from './actions';
 
 describe('Function: NavReducer', () => {
   it('should return state by default', () => {
