@@ -12,7 +12,7 @@ describe('Function: NavReducer', () => {
     expect(result).toBe(initialState);
   });
 
-  it('should return state with hello equals true with action type HELLO', () => {
+  it('should return state with hello equals true on action type HELLO', () => {
     const result = reducer(initialState, actions.testAction());
     expect(result.hello).toBe(true);
   });
