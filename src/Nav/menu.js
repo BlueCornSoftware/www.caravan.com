@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { withStyles } from '@material-ui/core/styles';
@@ -61,5 +62,12 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
   navActions: bindActionCreators(NavActions, dispatch),
 });
+
+/* eslint-disable */
+ButtonAppBar.propTypes = {
+  classes: PropTypes.object,
+  navActions: PropTypes.object,
+};
+/* eslint-enable */
 
 export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(ButtonAppBar));

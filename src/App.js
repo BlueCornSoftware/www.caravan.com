@@ -1,9 +1,10 @@
+import { Provider } from 'react-redux';
 import React, { Component } from 'react';
 import * as Landing from './Landing';
 import * as Nav from './Nav';
 import store from './store';
-import { Provider } from 'react-redux';
 
+/* eslint-disable */
 class App extends Component {
   render() {
     return (
@@ -19,5 +20,6 @@ class App extends Component {
     );
   }
 }
+/* eslint-enable */
 
 export default App;
