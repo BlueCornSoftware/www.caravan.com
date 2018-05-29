@@ -9,8 +9,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 
-import * as NavActions from './Nav.actions';
-
+import * as NavActions from './actions';
 
 const styles = {
   root: {
@@ -31,15 +30,22 @@ function ButtonAppBar(props) {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+          <IconButton
+            className={classes.menuButton}
+            color="inherit"
+            aria-label="Menu"
+          >
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
             Caravan
           </Typography>
-          <Button color="inherit" onClick={() => {
-            navActions.testAction();
-          }}>
+          <Button
+            color="inherit"
+            onClick={() => {
+              navActions.testAction();
+            }}
+          >
             Login
           </Button>
         </Toolbar>
@@ -56,4 +62,6 @@ const mapDispatchToProps = dispatch => ({
   navActions: bindActionCreators(NavActions, dispatch),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(ButtonAppBar));
+export default connect(mapStateToProps, mapDispatchToProps)(
+  withStyles(styles)(ButtonAppBar)
+);

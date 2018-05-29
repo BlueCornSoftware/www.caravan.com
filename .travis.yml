@@ -7,4 +7,3 @@ script:
   - nsp check
   - CI=true npm test -- --coverage --env=jsdom
   
-  

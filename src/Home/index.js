@@ -1,4 +1,4 @@
-import Page from './Home.page';
+import Page from './page';
 
 export {
   Page,

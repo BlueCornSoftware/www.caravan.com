@@ -1,7 +1,4 @@
-import Card from './Landing.card';
-import Form from './Landing.form';
+import Card from './card';
+import Form from './form';
 
-export {
-  Card,
-  Form,
-}
+export { Card, Form };

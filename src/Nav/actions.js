@@ -1,4 +1,4 @@
-import * as types from './Nav.types';
+import * as types from './types';
 
 export const testAction = () => ({
   type: types.HELLO,
