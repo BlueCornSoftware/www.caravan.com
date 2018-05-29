@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import * as Landing from './Landing';
 import * as Nav from './Nav';
-import { Provider } from 'react-redux';
 import store from './store';
 
 /* eslint-disable */
