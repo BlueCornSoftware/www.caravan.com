@@ -18,9 +18,7 @@ function LandingCard(props) {
   return (
     <div>
       <Card className={classes.card}>
-        <CardContent>
-          {children}
-        </CardContent>
+        <CardContent>{children}</CardContent>
         <CardActions>
           <Button size="small">Learn More</Button>
         </CardActions>

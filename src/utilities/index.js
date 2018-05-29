@@ -1,5 +1,3 @@
 import buildPrefixer from './buildPrefixer';
 
-export {
-  buildPrefixer,
-};
+export { buildPrefixer };
