@@ -62,6 +62,4 @@ const mapDispatchToProps = dispatch => ({
   navActions: bindActionCreators(NavActions, dispatch),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  withStyles(styles)(ButtonAppBar)
-);
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(ButtonAppBar));
