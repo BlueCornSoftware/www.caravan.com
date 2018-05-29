@@ -47,9 +47,11 @@ function LandingCard(props) {
   );
 }
 
+/* eslint-disable */
 LandingCard.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.array.isRequired
 };
+/* eslint-enable */
 
 export default withStyles(styles)(LandingCard);

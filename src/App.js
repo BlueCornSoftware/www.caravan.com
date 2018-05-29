@@ -1,19 +1,25 @@
-import React, { Component } from "react";
-import * as Landing from "./Landing";
-import * as Nav from "./Nav";
+import React, { Component } from 'react';
+import * as Landing from './Landing';
+import * as Nav from './Nav';
+import { Provider } from 'react-redux';
+import store from './store';
 
+/* eslint-disable */
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Nav.Menu />
-        <Landing.Card>
-          <h4>Hello</h4>
-          <Landing.Form />
-        </Landing.Card>
-      </div>
+      <Provider store={store}>
+        <div className="App">
+          <Nav.Menu />
+          <Landing.Card>
+            <h4>Hello</h4>
+            <Landing.Form />
+          </Landing.Card>
+        </div>
+      </Provider>
     );
   }
 }
+/* eslint-enable */
 
 export default App;

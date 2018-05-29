@@ -1,27 +1,28 @@
-import React from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { withStyles } from "@material-ui/core/styles";
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { withStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 
-import * as NavActions from "./actions";
+import * as NavActions from './actions';
 
 const styles = {
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   flex: {
-    flex: 1
+    flex: 1,
   },
   menuButton: {
     marginLeft: -12,
-    marginRight: 20
-  }
+    marginRight: 20,
+  },
 };
 
 function ButtonAppBar(props) {
@@ -55,13 +56,18 @@ function ButtonAppBar(props) {
 }
 
 const mapStateToProps = state => ({
-  Nav: state.Nav
+  Nav: state.Nav,
 });
 
 const mapDispatchToProps = dispatch => ({
-  navActions: bindActionCreators(NavActions, dispatch)
+  navActions: bindActionCreators(NavActions, dispatch),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(
-  withStyles(styles)(ButtonAppBar)
-);
+/* eslint-disable */
+ButtonAppBar.propTypes = {
+  classes: PropTypes.object,
+  navActions: PropTypes.object,
+};
+/* eslint-enable */
+
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(ButtonAppBar));
