@@ -1,16 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import InputLabel from '@material-ui/core/InputLabel';
-import Input from '@material-ui/core/Input';
-import InputAdornment from '@material-ui/core/InputAdornment';
-import FromIcon from '@material-ui/icons/Navigation';
-import ToIcon from '@material-ui/icons/Directions';
 import Button from '@material-ui/core/Button';
 import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
 import DateTimePicker from 'material-ui-pickers/DateTimePicker';
 import MomentUtils from 'material-ui-pickers/utils/moment-utils';
 import { withStyles } from '@material-ui/core/styles';
 import { reduxForm } from 'redux-form';
+import LocationInput from './locationInput';
 
 const styles = {
   form: {
@@ -30,26 +27,8 @@ function LandingForm(props) {
   const { classes } = props;
   return (
     <form className={classes.form} onSubmit={() => {}}>
-      <InputLabel className={classes.form_item}>
-        From
-        <Input
-          startAdornment={
-            <InputAdornment position="start">
-              <FromIcon />
-            </InputAdornment>
-          }
-        />
-      </InputLabel>
-      <InputLabel className={classes.form_item}>
-        To
-        <Input
-          startAdornment={
-            <InputAdornment position="start">
-              <ToIcon />
-            </InputAdornment>
-          }
-        />
-      </InputLabel>
+      <LocationInput type="from" style={classes.form_item} />
+      <LocationInput type="to" style={classes.form_item} />
       <InputLabel className={classes.form_item}>
         When
         <MuiPickersUtilsProvider utils={MomentUtils}>
