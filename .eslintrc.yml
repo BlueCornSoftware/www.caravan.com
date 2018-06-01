@@ -6,3 +6,5 @@ globals:
   describe: true
   it: true
   expect: true
+env:
+  browser: true
