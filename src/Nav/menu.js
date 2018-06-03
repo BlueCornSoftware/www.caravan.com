@@ -39,7 +39,7 @@ function ButtonAppBar(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={classes.flex}>
-            Caravan
+            <span className="PageTitle" >Caravan</span>
           </Typography>
           <Button
             color="inherit"

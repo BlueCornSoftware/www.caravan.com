@@ -50,7 +50,8 @@
     "prestart": "git config core.hooksPath ./git_hooks",
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "test:ui": "node_modules/.bin/jest --config ui-test.config.js"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -99,6 +100,7 @@
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.8.2"
+    "eslint-plugin-react": "^7.8.2",
+    "puppeteer": "^1.4.0"
   }
 }
