@@ -1,5 +1,5 @@
-import { Provider } from 'react-redux';
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import * as Landing from './Landing';
 import * as Nav from './Nav';
 import store from './store';

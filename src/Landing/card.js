@@ -6,9 +6,26 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 
+/* eslint-disable */
+const backgroundImage = require('../images/backseat.jpg');
+/* eslint-enable */
+
 const styles = {
   card: {
     minWidth: 275,
+    minHeight: '80vh',
+    color: 'white',
+    backgroundImage: `url(${backgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'bottom center',
+    display: 'flex',
+    flexFlow: 'column',
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end',
+    padding: 100,
+  },
+  button: {
+    color: 'white',
   },
 };
 
@@ -20,7 +37,9 @@ function LandingCard(props) {
       <Card className={classes.card}>
         <CardContent>{children}</CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small" variant="raised" color="primary" className={classes.button}>
+            Learn More
+          </Button>
         </CardActions>
       </Card>
     </div>
