@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 
-
 describe('The Nav Bar', () => {
   it('should have an initial title of "Caravan"', async (done) => {
     const browser = await puppeteer.launch();
